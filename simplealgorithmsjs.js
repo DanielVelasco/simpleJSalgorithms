@@ -150,3 +150,39 @@ function Occurence()
 
 
  //Occurence();
+ 
+ //Bubble sort ascending by default
+ 
+ array1 = [11,6,9,3,5,3,2,2,2];
+
+function SortA(array)
+{
+ 
+	for(i=0;i<array1.length;i++)
+	{
+
+		for(b=i;b<array1.length;b++)
+		{
+		
+			if(array1[i] > array1[b])
+			{
+			
+			   
+				temp = array1[b];
+				array1[b] = array1[i];
+				array1[i] = temp;
+			
+		  
+			}
+		
+		}
+
+
+
+	}
+
+
+alert(array1); 
+ }
+ 
+ //SortA(array1); function call
