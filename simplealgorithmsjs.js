@@ -1,3 +1,39 @@
+// merge arrays in order
+ function main()
+{
+array1 = [3,27,38,43];
+array2 = [9,10,82];
+merge(array1,array2);
+}
+
+
+
+function merge(array1,array2)
+{
+NewArray = [];
+totalLength = array1.length + array2.length;
+pt1 = 0;
+pt2 = 0;
+i = 0;
+while(NewArray.length != totalLength)
+{
+	if(array1[pt1] < array2[pt2])
+    {
+    	NewArray[i] = array1[pt1];
+        pt1++;
+    } else
+    {
+    	NewArray[i] = array2[pt2];
+        pt2++;
+    }
+    i++;
+    alert(NewArray);
+}
+
+}
+main();
+ 
+ 
  //Rotate Array
 
 function rotate(array,steps)
