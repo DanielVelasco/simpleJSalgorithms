@@ -186,3 +186,6 @@ alert(array1);
  }
  
  //SortA(array1); function call
+ 
+ //Rotate Array
+ 
