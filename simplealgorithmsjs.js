@@ -29,50 +29,33 @@ function main()
 
 //Compare values at indicies and choose larger
 
-array1 = [1,2,5,7];
-array2 = [1,4,6,9,10,11];
 
-
-function CompareWith(index,value)
+function CompareWith(array1,array2)
 {
-
-    for(i=0;i<array2.length;i++)
+    for(i=0;i<array1.length;i++)
     {
-        if(array2[i] >= value)
+        if(array2[i] >= array1[i])
         {
-          
-            array1[index] = array2[i];
-            break;
+            array1[i] = array2[i];
         }
-    
+        if(i == array1.length || i == array2.length)
+        {
+        	break;
+        }
     }
-
-
+    return array1;
 }
   
 function main()
 {
-  
-  for(i=0;i<array1.length;i++)
-    {
-      
-      CompareWith(i,array1[i]);
-     
-      
-    }
-   
- 
-for(i=0;i<array1.length;i++)
-    {
-      
-      alert(array1[i]);
-     
-      
-    }
-  
+array1 = [1,2,5,7,4,7];
+array2 = [1,4,6,9,10,11];
+array1 = CompareWith(array1,array2);
+alert(array1);
 }
+main();
 
-//main();
+
 
 //Count how many time string appears in string. Will alert every time string has occured. could create a counter to count occurences
 
