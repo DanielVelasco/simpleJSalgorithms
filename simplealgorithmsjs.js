@@ -1,10 +1,5 @@
  //Rotate Array
- function main()
-{
-	var array = [1,2,3,4,5,6,7];
-    array = rotate(array,3);
-    alert(array);
-}
+
 function rotate(array,steps)
 {
 var newArray = [];
@@ -20,7 +15,15 @@ index = steps;
     }
    return newArray;
 }
-main();
+
+function main()
+{
+    var array = [1,2,3,4,5,6,7];
+    array = rotate(array,3);
+    alert(array);
+}
+
+//main();
 
 
 
