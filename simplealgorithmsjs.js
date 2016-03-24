@@ -1,3 +1,29 @@
+ //Rotate Array
+ function main()
+{
+	var array = [1,2,3,4,5,6,7];
+    array = rotate(array,3);
+    alert(array);
+}
+function rotate(array,steps)
+{
+var newArray = [];
+index = steps;
+	for(i=0;i<array.length;i++)
+    {
+    	newArray[index] = array[i];
+        index++;
+        if(index == array.length)
+        {
+        	index = 0;
+        }
+    }
+   return newArray;
+}
+main();
+
+
+
 //Get larger values into array1 from source if possible or retain the same values of array1
 
 array1 = [1,2,5,7];
@@ -21,7 +47,7 @@ function CompareWith(index,value)
 
 }
   
-function sayHello1()
+function main()
 {
   
   for(i=0;i<array1.length;i++)
@@ -43,7 +69,7 @@ for(i=0;i<array1.length;i++)
   
 }
 
-//sayHello1();
+//main();
 
 //Count how many time string appears in string. Will alert every time string has occured. could create a counter to count occurences
 
@@ -80,7 +106,7 @@ function isTrue(index)
     
 }
 
-function sayHello2()
+function main()
 {
     
     for(i=0;i<str.length;i++)
@@ -97,7 +123,7 @@ function sayHello2()
    
 }
 
-//sayHello2(); function call
+//main(); function call
 
 //Count how many times pairs of dupes appear in the array.
 array1 = [11,33,4,5,6,11,4,99,33];
@@ -133,7 +159,7 @@ isIn = false;
 }
 
 
-function Occurence()
+function main()
 {
 
 	for(i=0;i<array1.length;i++)
@@ -149,7 +175,7 @@ function Occurence()
 
 
 
- //Occurence();
+ //main();
  
  //Bubble sort ascending by default
  
@@ -187,27 +213,5 @@ alert(array1);
  
  //SortA(array1); function call
  
- //Rotate Array
- function main()
-{
-	var array = [1,2,3,4,5,6,7];
-    array = rotate(array,3);
-    alert(array);
-}
-function rotate(array,steps)
-{
-var newArray = [];
-index = steps;
-	for(i=0;i<array.length;i++)
-    {
-    	newArray[index] = array[i];
-        index++;
-        if(index == array.length)
-        {
-        	index = 0;
-        }
-    }
-   return newArray;
-}
-main();
+
  
