@@ -27,7 +27,7 @@ function main()
 
 
 
-//Get larger values into array1 from source if possible or retain the same values of array1
+//Compare values at indicies and choose larger
 
 array1 = [1,2,5,7];
 array2 = [1,4,6,9,10,11];
