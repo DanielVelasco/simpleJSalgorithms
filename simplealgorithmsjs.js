@@ -188,4 +188,26 @@ alert(array1);
  //SortA(array1); function call
  
  //Rotate Array
+ function main()
+{
+	var array = [1,2,3,4,5,6,7];
+    array = rotate(array,3);
+    alert(array);
+}
+function rotate(array,steps)
+{
+var newArray = [];
+index = steps;
+	for(i=0;i<array.length;i++)
+    {
+    	newArray[index] = array[i];
+        index++;
+        if(index == array.length)
+        {
+        	index = 0;
+        }
+    }
+   return newArray;
+}
+main();
  
