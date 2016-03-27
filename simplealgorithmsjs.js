@@ -1,3 +1,39 @@
+//Remove Duplicates from an unsorted list of integers
+
+function checkDuplicates(array)
+{
+CheckArray = [];
+RArray = [];
+index = 0;
+for(i=0;i<array.length;i++)
+{
+flag = false;
+	for(c=0;c<CheckArray.length;c++)
+    {
+    	if(array[i] == CheckArray[c])
+        {
+        	flag = true;
+            break;
+        }
+    }
+    if(flag == false)
+    {
+    	CheckArray[index] = array[i];
+        RArray[index] = array[i];
+        index++;
+    }
+}
+return RArray;
+}
+
+function main()
+{
+array = [1,4,3,3,8,10,10,1,1,3,7];
+RetArray = checkDuplicates(array);
+alert(RetArray);
+}
+main();
+
 // merge arrays in order
  function main()
 {
@@ -5,9 +41,6 @@ array1 = [3,27,38,43];
 array2 = [9,10,82];
 merge(array1,array2);
 }
-
-
-
 function merge(array1,array2)
 {
 NewArray = [];
@@ -29,13 +62,10 @@ while(NewArray.length != totalLength)
     i++;
     alert(NewArray);
 }
-
 }
 main();
- 
- 
- //Rotate Array
 
+//Rotate Array
 function rotate(array,steps)
 {
 var newArray = [];
@@ -51,21 +81,15 @@ index = steps;
     }
    return newArray;
 }
-
 function main()
 {
     var array = [1,2,3,4,5,6,7];
     array = rotate(array,3);
     alert(array);
 }
-
 //main();
 
-
-
 //Compare values at indicies and choose larger
-
-
 function CompareWith(array1,array2)
 {
     for(i=0;i<array1.length;i++)
@@ -91,60 +115,38 @@ alert(array1);
 }
 main();
 
-
-
 //Count how many time string appears in string. Will alert every time string has occured. could create a counter to count occurences
-
 str = "thedogwenttothe";
 str2= "the";
-
-
 function isTrue(index)
 {
    IsIn = null;
     for(c=0;c<str2.length;c++)
     {
-        
         if(str2[c] == str[index])
         {
-           
             IsIn = true;
-            
         }else
         {
              IsIn = false;
-            
         }
-        
-        
        index++
     }
-    
     if(IsIn === true)
     {
         alert("in");
     }
-    
-    
 }
-
 function main()
 {
-    
     for(i=0;i<str.length;i++)
     {
-        
         if(str[i] == str2[0])
         {
          isTrue(i);
-            
-            
         }
-        
     }
-   
 }
-
 //main(); function call
 
 //Count how many times pairs of dupes appear in the array.
@@ -154,86 +156,57 @@ num = 0;
 
 function DoubleCheck(number)
 {
-
 isIn = false;
 	for(b=0;b<arrayDouble.length;b++)
     {
-    
     	if(arrayDouble[b] == number)
         {
         	isIn = true;
          	alert("twice");
             break;
-        
         }
-    
     }
-    
     if(isIn == false)
     {
-    	
     	arrayDouble[num] = number;
         num++;
-    
-	}
-
-
+    }
 }
-
 
 function main()
 {
-
 	for(i=0;i<array1.length;i++)
     {
-    
     	DoubleCheck(array1[i]);
-    
     }
 	
-
-
 }
-
-
-
- //main();
+//main();
  
  //Bubble sort ascending by default
  
- array1 = [11,6,9,3,5,3,2,2,2];
 
 function SortA(array)
 {
- 
 	for(i=0;i<array1.length;i++)
 	{
-
 		for(b=i;b<array1.length;b++)
 		{
-		
 			if(array1[i] > array1[b])
 			{
-			
-			   
 				temp = array1[b];
 				array1[b] = array1[i];
 				array1[i] = temp;
-			
-		  
 			}
-		
 		}
-
-
-
 	}
-
-
 alert(array1); 
  }
  
+ function main()
+ {
+ 	array = [11,6,9,3,5,3,2,2,2];
+ 	Sarray = SortA(array);
+ 	alert(Sarray);
+ }
  //SortA(array1); function call
- 
-
- 
