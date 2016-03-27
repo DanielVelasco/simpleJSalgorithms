@@ -116,9 +116,20 @@ alert(array1);
 main();
 
 //Count how many time string appears in string. Will alert every time string has occured. could create a counter to count occurences
-str = "thedogwenttothe";
-str2= "the";
-function isTrue(index)
+function Iterate(str)
+{
+Ct = 0;
+ for(i=0;i<str.length;i++)
+    {
+        if(str[i] == str2[0])
+        {
+         IterateSubstr(i,Ct);
+        }
+    }
+    alert("Substring appears in String " + Ct.toString() + " Times");
+}
+
+function IterateSubstr(index,count)
 {
    IsIn = null;
     for(c=0;c<str2.length;c++)
@@ -134,27 +145,19 @@ function isTrue(index)
     }
     if(IsIn === true)
     {
-        alert("in");
+        Ct++;
     }
 }
 function main()
 {
-    for(i=0;i<str.length;i++)
-    {
-        if(str[i] == str2[0])
-        {
-         isTrue(i);
-        }
-    }
+str = "thedogwentttheothethadthethth";
+str2= "the";
+Iterate(str);
 }
-//main(); function call
+main();
 
 //Count how many times pairs of dupes appear in the array.
-array1 = [11,33,4,5,6,11,4,99,33];
-arrayDouble = [];
-num = 0;
-
-function DoubleCheck(number)
+function DoubleCheck(number,n)
 {
 isIn = false;
 	for(b=0;b<arrayDouble.length;b++)
@@ -175,9 +178,12 @@ isIn = false;
 
 function main()
 {
+array1 = [11,33,4,5,6,11,4,99,33];
+arrayDouble = [];
+num = 0;
 	for(i=0;i<array1.length;i++)
     {
-    	DoubleCheck(array1[i]);
+    	DoubleCheck(array1[i],n);
     }
 	
 }
