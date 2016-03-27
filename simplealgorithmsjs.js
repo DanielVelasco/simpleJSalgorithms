@@ -115,7 +115,7 @@ alert(array1);
 }
 main();
 
-//Count how many time string appears in string. Will alert every time string has occured. could create a counter to count occurences
+//Count how many time substr appears in string. string1 < string2
 function Iterate(str)
 {
 Ct = 0;
