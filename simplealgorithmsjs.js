@@ -115,7 +115,7 @@ alert(array1);
 }
 main();
 
-//Count how many time substr appears in string. string1 < string2
+//Count how many time substr appears in string. len(string1) > len(string2)
 function Iterate(str)
 {
 Ct = 0;
@@ -157,41 +157,50 @@ Iterate(str);
 main();
 
 //Count how many times pairs of dupes appear in the array.
-function DoubleCheck(number,n)
+var array = [11,33,4,5,6,11,4,99,33,99]; //glb
+var ct = 0; //glb
+var ctD = 0; //glb
+var arrayDouble = []; //glb
+var DupeArray = []; //glb
+
+function Iterate(array)
 {
-isIn = false;
+	for(i=0;i<array.length;i++)
+    {
+    	DoubleCheck(array[i]);
+    }
+	return DupeArray;
+}
+
+function DoubleCheck(number)
+{
+flag = false;
 	for(b=0;b<arrayDouble.length;b++)
     {
     	if(arrayDouble[b] == number)
         {
-        	isIn = true;
-         	alert("twice");
+        	flag = true;
+            DupeArray[ctD] = number;
+            ctD++;
             break;
         }
     }
-    if(isIn == false)
+    if(flag == false)
     {
-    	arrayDouble[num] = number;
-        num++;
+    	arrayDouble[ct] = number;
+        ct++;
     }
 }
 
 function main()
 {
-array1 = [11,33,4,5,6,11,4,99,33];
-arrayDouble = [];
-num = 0;
-	for(i=0;i<array1.length;i++)
-    {
-    	DoubleCheck(array1[i],n);
-    }
-	
+Rarray = Iterate(array);
+alert(Rarray);
 }
-//main();
- 
- //Bubble sort ascending by default
- 
 
+main();
+
+ //Bubble sort ascending by default
 function SortA(array)
 {
 	for(i=0;i<array1.length;i++)
