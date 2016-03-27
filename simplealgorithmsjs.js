@@ -156,7 +156,7 @@ Iterate(str);
 }
 main();
 
-//Count how many times pairs of dupes appear in the array.
+//Track dupes in array
 var array = [11,33,4,5,6,11,4,99,33,99]; //glb
 var ct = 0; //glb
 var ctD = 0; //glb
