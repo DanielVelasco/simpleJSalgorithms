@@ -1,3 +1,35 @@
+//Check if a string is a palindrome
+
+function CheckPalindrome(string)
+{
+string = string.toLowerCase();
+length = string.length - 1;
+flag = true;
+	for(i=0;i<string.length;i++)
+    {
+    	if(string[i] != string[length])
+        {
+        	flag = false;
+        	break;
+        }
+       length--;
+    }
+    return flag;
+}
+
+function main()
+{
+string = "Straw Warts";
+isPalindrome = CheckPalindrome(string);
+alert(isPalindrome);
+}
+main();
+
+
+
+
+
+
 //Find the sum of all the integers in an array except for the current index.
 
 function Rarray(array)
