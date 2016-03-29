@@ -1,3 +1,35 @@
+//Find the sum of all the integers in an array except for the current index.
+
+function Rarray(array)
+{
+NewArray = [];
+index = 0;
+	for(i=0;i<array.length;i++)
+    {
+    Sum = 0;
+    	for(c=0;c<array.length;c++)
+        {
+        	if(array[i] != array[c])
+            {
+            	Sum += array[c];
+            }
+        }
+        NewArray[index] = Sum;
+        index++;
+    }
+    return NewArray;
+}
+function main()
+{
+array = [1,2,4,8,9];
+NArray = Rarray(array);
+alert(NArray);
+}
+main();
+
+
+
+
 //Remove Duplicates from an unsorted list of integers
 
 function checkDuplicates(array)
