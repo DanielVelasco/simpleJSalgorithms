@@ -1,3 +1,27 @@
+//rotate matrix 90degrees in place
+function Rmatrix(matrix)
+{
+	for(i=0;i<matrix.length;i++)
+    {
+    	for(c=i;c<matrix[i].length;c++)
+        {
+        	temp = matrix[i][c];
+        	matrix[i][c] = matrix[c][i]
+            matrix[c][i] = temp;
+        }
+    }
+    console.log(matrix);
+}
+
+function main()
+{
+matrix = [[1,1,1],[2,2,2],[3,3,3]];
+Rmatrix(matrix);
+}
+main();
+
+
+
 //Check if a string is a palindrome
 
 function CheckPalindrome(string)
