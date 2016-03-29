@@ -4,7 +4,7 @@ function Rarray(array)
 {
 NewArray = [];
 index = 0;
-	for(i=0;i<array.length;i++)
+for(i=0;i<array.length;i++)
     {
     Sum = 0;
     	for(c=0;c<array.length;c++)
