@@ -1,3 +1,27 @@
+// Find the last N elements of an array of unknown length
+var array = [1,2,3,4,5,6,7,8,13,5,3,2];
+
+function Collect(bufferNum){
+var buffer = []; //create buffer
+for(i=0;i<array.length;i++)
+{
+	if(i >= bufferNum)
+    {
+    	for(c=0;c<buffer.length;c++)
+        {
+        buffer[c] = buffer[c+1]; //shift 
+        }
+        buffer[bufferNum-1] = array[i]; //replace last element in buffer
+    }else{
+    buffer[i] = array[i]; //fill buffer up until full, after shift and push element to bottom of buffer
+    }
+
+}
+alert(buffer);
+}
+Collect(6); //buffer is 6 in this case
+
+
 //rotate matrix 90degrees in place
 function Rmatrix(matrix)
 {
