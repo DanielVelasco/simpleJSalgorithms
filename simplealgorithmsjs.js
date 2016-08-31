@@ -1,3 +1,16 @@
+/*Transpose matrix - try alternative ways to do this later*/
+for(i=0;i<array[0].length;i++)
+{
+	b = 0;
+    while(b <array.length)
+    {
+    /*alert(array[b][i]);*/
+     t = array[b][i];
+     narray[i][b] = t;
+    b++
+    }
+}
+return narray
 // Find the last N elements of an array of unknown length
 var array = [1,2,3,4,5,6,7,8,13,5,3,2];
 
