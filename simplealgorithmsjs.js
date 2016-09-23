@@ -33,8 +33,43 @@ for(i=0;i<array.length;i++)
 alert(buffer);
 }
 Collect(6); //buffer is 6 in this case
-
-
+// one string contains another string
+Str = "catuinthehat";
+Sub = "tu";
+function contains(index,Bstring,substring)
+{
+flag = true;
+if( ( (index) + substring.length) > Bstring.length)
+{
+	console.log("boundaries exceeded");
+	return false;
+}
+for(z = 0; z < substring.length;z++)
+{
+	if(substring[z] != Bstring[index])
+    	{
+        	flag = false;
+        }
+        index++;
+}
+return flag;
+}
+function iterate(substring,string)
+{
+	for(i=0;i<string.length;i++)
+    	{
+        	if(substring[0] == string[i])
+            {
+            	l = contains(i,string,substring);
+                console.log(l);
+               	if(l == true)
+                {
+                	break;
+                }
+            }
+        }
+}
+iterate(Sub,Str);
 //rotate matrix 90degrees in place
 function Rmatrix(matrix)
 {
