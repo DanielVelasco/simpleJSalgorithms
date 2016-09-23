@@ -33,6 +33,7 @@ for(i=0;i<array.length;i++)
 alert(buffer);
 }
 Collect(6); //buffer is 6 in this case
+
 // one string contains another string
 Str = "catuinthehat";
 Sub = "tu";
