@@ -62,9 +62,9 @@ function iterate(substring,string)
         	if(substring[0] == string[i])
             {
             	l = contains(i,string,substring);
-                console.log(l);
                	if(l == true)
                 {
+			console.log(l);
                 	break;
                 }
             }
@@ -93,7 +93,25 @@ Rmatrix(matrix);
 }
 main();
 
-
+//fib
+ array = [1,1];
+ size = array.length;
+ index = size;
+ 
+ function FibN(nth,numberOf){
+ for (x = 1;x<(numberOf+1)-size;x++)
+ {
+ 	n = array[x] + array[x-1];
+    array[index] = n;
+    if(index == (nth-1))
+    {
+    	console.log(array[index]);
+    }
+    index++;
+ }
+ console.log(array);
+ }
+ FibN(3,10);
 
 //Check if a string is a palindrome
 
@@ -273,47 +291,6 @@ array1 = [1,2,5,7,4,7];
 array2 = [1,4,6,9,10,11];
 array1 = CompareWith(array1,array2);
 alert(array1);
-}
-main();
-
-//Count how many time substr appears in string. len(string1) > len(string2)
-function Iterate(str)
-{
-Ct = 0;
- for(i=0;i<str.length;i++)
-    {
-        if(str[i] == str2[0])
-        {
-         IterateSubstr(i,Ct);
-        }
-    }
-    alert("Substring appears in String " + Ct.toString() + " Times");
-}
-
-function IterateSubstr(index,count)
-{
-   IsIn = null;
-    for(c=0;c<str2.length;c++)
-    {
-        if(str2[c] == str[index])
-        {
-            IsIn = true;
-        }else
-        {
-             IsIn = false;
-        }
-       index++
-    }
-    if(IsIn === true)
-    {
-        Ct++;
-    }
-}
-function main()
-{
-str = "thedogwentttheothethadthethth";
-str2= "the";
-Iterate(str);
 }
 main();
 
