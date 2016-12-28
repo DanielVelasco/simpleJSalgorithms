@@ -338,7 +338,7 @@ alert(Rarray);
 
 main();
 
- //Bubble sort ascending by default
+ //Selection sort ascending by default
 function SortA(array)
 {
 	for(i=0;i<array1.length;i++)
